@@ -443,7 +443,7 @@
 	var a = document.getElementById('main-search');
 	if (typeof a != 'undefined' && a != null) {
 		window.onresize = function () {
-			if (window.innerWidth > 930) {
+			if (window.innerWidth > 990) {
 				//check mobile search | if open > close
 				//close if open
 				if (a.classList.contains('opened')) {
