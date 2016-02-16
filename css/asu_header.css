@@ -97,8 +97,9 @@
 
 #asu_universal_nav ul ul {
     position:absolute;
-    left:0;
-    display:none;
+    left:-9999px;
+/*    left:0;*/
+/*    display:none;*/
     background-color:#fff;
     padding-top:10px;
     -moz-box-shadow:0 3px 3px 0 #999;
@@ -120,7 +121,7 @@
     z-index:100
 }
 
-#asu_universal_nav>ul>li:hover {
+#asu_universal_nav>ul>li:hover{
     display:inline-block;
     z-index:10
 }
@@ -137,9 +138,15 @@
     margin:5px 10px;
     line-height:20px
 }
-
-#asu_universal_nav ul li:hover>ul {
+#asu_universal_nav ul ul.asu_head_hover{
+	display:block;
+	left: 0;
+    top:20px;
+    z-index:-1
+}
+#asu_universal_nav ul li:hover>ul, #asu_universal_nav ul a:focus +ul{
     display:block;
+	left: 0;
     top:20px;
     z-index:-1
 }

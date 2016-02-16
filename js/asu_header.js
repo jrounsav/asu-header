@@ -339,7 +339,58 @@
 			a.insertBefore(ul, a.firstChild);
 			console.log(a.firstChild);
 			document.getElementById('asu_nav_menu').appendChild(divTag);
-
+			
+			/*
+				**
+				- Accessibility
+				**
+				Class Name - asu_head_hover
+			*/
+			
+			(function applyAccessibility(){
+				var navTop = document.querySelectorAll("#asu_universal_nav>ul>li>a");
+				var navInner = document.querySelectorAll("#asu_universal_nav ul li.parent>ul>li>a");
+				
+				document.body.addEventListener("click", function(){
+					removeHover();
+				}, true);
+				
+				for(var j=0;j<navTop.length;j++){
+					if(navTop[j] && navTop[j].parentNode){
+						
+						
+						navTop[j].addEventListener("focus", function(){
+							removeHover();
+							if(this.parentNode.classList.contains("parent")){
+								this.nextSibling.classList.add("asu_head_hover");
+							}
+						});
+						navTop[j].addEventListener("mouseover", function(){
+							this.focus();
+						});
+					}					
+				}
+				for(var k=0;k<navInner.length;k++){
+					if(navInner[k]){
+						navInner[k].addEventListener("focus", function(){
+							if(!this.parentNode.parentNode.classList.contains("asu_head_hover")){
+								removeHover();
+								this.parentNode.parentNode.classList.add("asu_head_hover");
+							}
+						});
+					}
+				}
+				function removeHover(){
+					var hovering = document.querySelectorAll(".asu_head_hover");
+					for(var i = 0; i < hovering.length; i++){
+						hovering[i].classList.remove("asu_head_hover");
+					}
+				}				
+				console.log("accessible!");
+			})();
+			
+			// END Accessibility
+			
 			//create search [GSA | COLLECTION]
 			createSearch('main-search');
 			/*
