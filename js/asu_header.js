@@ -385,12 +385,12 @@
 					for(var i = 0; i < hovering.length; i++){
 						hovering[i].classList.remove("asu_head_hover");
 					}
-				}				
+				}
 				console.log("accessible!");
 			})();
-			
+
 			// END Accessibility
-			
+
 			//create search [GSA | COLLECTION]
 			createSearch('main-search');
 			/*
