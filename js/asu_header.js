@@ -516,6 +516,10 @@
 	 */
 	//private
 	function createSearch(parent) {
+		var label = document.createElement("label");
+		label.htmlFor = "asu_search_box";
+		label.textContent = "Test";
+		label.style.cssText = 'display:none !important';
 		var parent = document.getElementById(parent);
 		var form = document.createElement('form');
 		var inpt = document.createElement('input');
@@ -551,6 +555,8 @@
 			addInpt(form, 'submit', '', 'asu_search_button', '', 'Search', '');
 			addInpt(form, 'text', 'q', 'asu_search_box', 'asu_search_box', '', 'Search');
 		}
+		
+		form.insertBefore(label, form.firstChild);
 		parent.innerHtml = '';
 		parent.appendChild(form);
 		form = '';
