@@ -205,8 +205,8 @@
 		}
 		if (ASUHeader.user_displayname) {
 			var sso_name = document.createElement('li');
-			//sso_name.innerHTML = ASUHeader.user_displayname; --- Security fix suggested by Jason Harper on 5/3/2013
-			sso_name.appendChild(document.createTextNode(ASUHeader.user_displayname));
+			sso_name.innerHTML = ASUHeader.user_displayname; //--- Security fix suggested by Jason Harper on 5/3/2013
+//			sso_name.appendChild(document.createTextNode(ASUHeader.user_displayname));
 			ul.appendChild(sso_name);
 		}
 		var sso_link = document.createElement('li');
