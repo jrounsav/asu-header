@@ -183,12 +183,11 @@
 	ASUHeader.checkSSOCookie = function () {
 			var cookies = document.cookie.split(";"); // try to parse out the username from SSONAME cookie
 			for (var i = 0; i < cookies.length; i++) {
-				if (cookies[i].indexOf('SSONAME') > 0) {					
-					var str = cookies[i].substring(9).toString();
+				if (cookies[i].indexOf('SSONAME') > 0) {
 					if (cookies[i].substring(9) == "") {
 						break;
 					}
-					ASUHeader.user_displayname = str.replace(/[^\w\s]/gi, '');
+					ASUHeader.user_displayname = cookies[i].substring(9);
 					ASUHeader.user_signedin = true;
 					break;
 				}
