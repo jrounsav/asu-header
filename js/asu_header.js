@@ -516,9 +516,15 @@
 	 */
 	//private
 	function createSearch(parent) {
+        var boxid = '';
+        if(parent == "asu_search_module"){
+            boxid = "masu_search_box";
+        } else{
+            boxid = "asu_search_box";
+        }
 		var label = document.createElement("label");
-		label.htmlFor = "asu_search_box";
-		label.textContent = "Test";
+		label.htmlFor = boxid;
+		label.textContent = "Search";
 		label.style.cssText = 'display:none !important';
 		var parent = document.getElementById(parent);
 		var form = document.createElement('form');
@@ -553,7 +559,7 @@
 			addInpt(form, 'hidden', 'oe', '', '', 'UTF-8', '');
 			addInpt(form, 'hidden', 'client', '', '', 'asu_frontend', '');
 			addInpt(form, 'submit', '', 'asu_search_button', '', 'Search', '');
-			addInpt(form, 'text', 'q', 'asu_search_box', 'asu_search_box', '', 'Search');
+			addInpt(form, 'text', 'q', boxid, 'asu_search_box', '', 'Search');
 		}
 		
 		form.insertBefore(label, form.firstChild);
