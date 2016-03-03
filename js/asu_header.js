@@ -341,6 +341,57 @@
 			a.insertBefore(ul, a.firstChild);
 			console.log(a.firstChild);
 			document.getElementById('asu_nav_menu').appendChild(divTag);
+			
+			/*
+				**
+				- Accessibility
+				**
+				Class Name - asu_head_hover
+			*/
+			
+			(function applyAccessibility(){
+				var navTop = document.querySelectorAll("#asu_universal_nav>ul>li>a");
+				var navInner = document.querySelectorAll("#asu_universal_nav ul li.parent>ul>li>a");
+				
+				document.body.addEventListener("click", function(){
+					removeHover();
+				}, true);
+				
+				for(var j=0;j<navTop.length;j++){
+					if(navTop[j] && navTop[j].parentNode){
+						
+						
+						navTop[j].addEventListener("focus", function(){
+							removeHover();
+							if(this.parentNode.classList.contains("parent")){
+								this.nextSibling.classList.add("asu_head_hover");
+							}
+						});
+						navTop[j].addEventListener("mouseover", function(){
+							this.focus();
+						});
+					}					
+				}
+				for(var k=0;k<navInner.length;k++){
+					if(navInner[k]){
+						navInner[k].addEventListener("focus", function(){
+							if(!this.parentNode.parentNode.classList.contains("asu_head_hover")){
+								removeHover();
+								this.parentNode.parentNode.classList.add("asu_head_hover");
+							}
+						});
+					}
+				}
+				function removeHover(){
+					var hovering = document.querySelectorAll(".asu_head_hover");
+					for(var i = 0; i < hovering.length; i++){
+						hovering[i].classList.remove("asu_head_hover");
+					}
+				}
+				console.log("accessible!");
+			})();
+
+			// END Accessibility
 
 			//create search [GSA | COLLECTION]
 			createSearch('main-search');
@@ -445,7 +496,7 @@
 	var a = document.getElementById('main-search');
 	if (typeof a != 'undefined' && a != null) {
 		window.onresize = function () {
-			if (window.innerWidth > 990) {
+			if (window.innerWidth > 930) {
 				//check mobile search | if open > close
 				//close if open
 				if (a.classList.contains('opened')) {
@@ -467,6 +518,16 @@
 	 */
 	//private
 	function createSearch(parent) {
+        var boxid = '';
+        if(parent == "asu_search_module"){
+            boxid = "masu_search_box";
+        } else{
+            boxid = "asu_search_box";
+        }
+		var label = document.createElement("label");
+		label.htmlFor = boxid;
+		label.textContent = "Search";
+		label.style.cssText = 'display:none !important';
 		var parent = document.getElementById(parent);
 		var form = document.createElement('form');
 		var inpt = document.createElement('input');
@@ -500,8 +561,10 @@
 			addInpt(form, 'hidden', 'oe', '', '', 'UTF-8', '');
 			addInpt(form, 'hidden', 'client', '', '', 'asu_frontend', '');
 			addInpt(form, 'submit', '', 'asu_search_button', '', 'Search', '');
-			addInpt(form, 'text', 'q', 'asu_search_box', 'asu_search_box', '', 'Search');
+			addInpt(form, 'text', 'q', boxid, 'asu_search_box', '', 'Search');
 		}
+		
+		form.insertBefore(label, form.firstChild);
 		parent.innerHtml = '';
 		parent.appendChild(form);
 		form = '';
