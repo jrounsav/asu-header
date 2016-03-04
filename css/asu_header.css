@@ -395,7 +395,7 @@
 #asu_hdr #asu_login_module a:hover,
 #asu_hdr #asu_universal_nav a:hover,
 #asu_hdr #asu_universal_nav a:focus{color: #d23153;}
-#asu_footer{font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;background-color:#E5E5E5;padding:30px 12px}
+#asu_footer{font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;background-color:#E5E5E5;padding:5px 30px}
 #asu_footer ul{list-style-type:none;margin-left:-40px}
 #asu_footer ul li{display:inline;margin-right:20px}
 #asu_footer a{text-decoration:none;font-size:1.1em;font-weight:400;color:#333}

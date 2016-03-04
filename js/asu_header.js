@@ -282,8 +282,12 @@
 				addLi(ul, 'tlb', '<div class="text"><a href="https://weblogin.asu.edu/cgi-bin/login" onclick="this.href=ASUHeader.alterLoginHref(this.href);" onfocus="this.href=ASUHeader.alterLoginHref(this.href);" onmouseover="this.href=ASUHeader.alterLoginHref(this.href);" target="_top">Sign In</a></div><div id="f-user" class="icn f-user"></div>');
 			} else {
 				//signout
-				var ASUHeaderStr = ASUHeader.user_displayname.toString();
-				ASUHeaderStr = ASUHeaderStr.replace(/[^\w\s]/gi, '');
+				var ASUHeaderStr;
+				if(ASUHeader.user_displayname){
+					ASUHeaderStr = ASUHeader.user_displayname;
+					ASUHeaderStr.toString();
+					ASUHeaderStr = ASUHeaderStr.replace(/[^\w\s]/gi, '');
+				}
 				addLi(ul, 'tlb', '<div class="text"><a target="_top" href="' + ASUHeader.signout_url + '">' + ASUHeaderStr + ' Sign Out</a></div><div id="f-user" class="icn f-user"></div>');
 			}
 
