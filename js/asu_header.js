@@ -372,7 +372,8 @@
 							}
 						});
 						navTop[j].addEventListener("mouseover", function(){
-							this.focus();
+// 							this.focus();
+							document.activeElement.blur();
 						});
 					}					
 				}
