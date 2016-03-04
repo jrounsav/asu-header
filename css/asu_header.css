@@ -303,13 +303,16 @@
     float: left;
 }
 .footer_innovate {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: bold;
 }
 #asu_footer .footer_innovate a {
     font-size: 1.3em;
     color: #a30046 !important;
     font-weight: bold !important;
+}
+#asu_footer .footer_innovate span {
+    font-size: 1.3em;
 }
 .footer_innovate a:hover {
     color: #d23153 !important;
