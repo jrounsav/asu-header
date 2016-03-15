@@ -691,7 +691,10 @@
     display: none!important;
   }
   #innovation-bar .innovation-status {
-    width: 90%!important;
+    width: 95%!important;
+  }
+  #innovation-footer .footer-menu ul li{
+    clear: left;
   }
 }
 
@@ -723,8 +726,8 @@
   height: 0;
 }
 #innovation-bar img {
-  margin-top: -2em;  
-  height: 8rem;
+  margin-top: -1.5em;  
+  height: 5em;
 }
 
 #innovation-bar {
@@ -754,11 +757,13 @@
 }
 
 #innovation-footer .footer-menu ul {
-  display: inline-block;
-  list-style: none;
-  margin: 0;
-  margin-bottom: 1.5em;
-  margin-top: 1em;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    display: table;
+    list-style: none;
+    margin: 0 0 0 5%;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
 }
 #innovation-footer .footer-menu ul li {
   float: left;
