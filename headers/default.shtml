@@ -1,4 +1,4 @@
-<!-- START /asuthemes/4.3/headers/default.shtml -->
+<!-- START /asuthemes/4.4/headers/default.shtml -->
 <div id="main-search" class="main-search closed"></div>
 <div id="asu_hdr" class="asu_hdr_white">
     <div id="asu_mobile_hdr">
@@ -102,4 +102,4 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
 //--><!]]>
 </script>
 <div style="clear:both;"></div>
-<!-- END /asuthemes/4.3/headers/default.shtml -->
+<!-- END /asuthemes/4.4/headers/default.shtml -->

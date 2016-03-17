@@ -1,6 +1,6 @@
 /*
  * *****
- * - ASU HEADER V4.3
+ * - ASU HEADER V4.4
  * *****
  */
 (function (ASUHeader, undefined) {
