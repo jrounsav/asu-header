@@ -4,7 +4,7 @@
  * *****
  */
 (function (ASUHeader, undefined) {
-	console.log('inside');
+	//  console.log('inside');
 	(function () {
 		if (!document.getElementsByClassName) {
 			var indexOf = [].indexOf || function (prop) {
@@ -219,9 +219,9 @@
 		}
 	}
 	window.onload = function () {
-		console.log('onload');
+		//  console.log('onload');
 		if (!ASUHeader.browser) {
-			console.log('asuheader.browser');
+			//  console.log('asuheader.browser');
 			removeEmptyTextNodes(document.getElementById('asu_hdr'));
 			/*
 			 * *****
@@ -262,7 +262,7 @@
 					dNav[i].appendChild(newLI);
 				}
 			}
-			console.log('test');
+			//  console.log('test');
 			//get newly built html
 			var a = document.getElementById('asu_universal_nav');
 			var nav = a.innerHTML;
@@ -343,7 +343,7 @@
 				}
 			}
 			a.insertBefore(ul, a.firstChild);
-			console.log(a.firstChild);
+			//  console.log(a.firstChild);
 			document.getElementById('asu_nav_menu').appendChild(divTag);
 			
 			/*
@@ -393,7 +393,7 @@
 						hovering[i].classList.remove("asu_head_hover");
 					}
 				}
-				console.log("accessible!");
+				//  console.log("accessible!");
 			})();
 
 			// END Accessibility
