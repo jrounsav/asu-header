@@ -772,7 +772,7 @@
 	-moz-osx-font-smoothing: grayscale;
     display: table;
     list-style: none;
-    margin: 0 0 0 5%;
+    margin: 0;
     padding-bottom: 0.5em;
     padding-top: 1em;
 }
@@ -788,6 +788,6 @@
   font-size: 1.1em;
   margin-right: 30px;
   text-decoration: none;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: none;
   transition: all .25s ease-in-out;
 }
