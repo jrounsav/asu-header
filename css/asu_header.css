@@ -1,15 +1,15 @@
 @media (min-width: 931px){
-  #innovation-footer .footer-menu ul {
+  #innovation-footer .footer-menu ul, #innovation-bar .innovation-top {
     width: 768px;
   }
 }
 @media (min-width: 992px){
-  #innovation-footer .footer-menu ul {
+  #innovation-footer .footer-menu ul, #innovation-bar .innovation-top {
     width: 931px;
   }
 }
 @media (min-width: 1200px){
-  #innovation-footer .footer-menu ul {
+  #innovation-footer .footer-menu ul, #innovation-bar .innovation-top {
     width: 1170px;
   }
 }
@@ -787,6 +787,10 @@
   position: absolute;
   left: 0;
   right: 0;
+}
+
+#innovation-bar .innovation-top {
+  margin: 0 auto;
 }
 
 #innovation-footer .footer-menu {
