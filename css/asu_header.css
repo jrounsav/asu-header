@@ -2,15 +2,45 @@
   #innovation-footer .footer-menu ul, #innovation-bar .innovation-top {
     width: 768px;
   }
+  #innovation-bar .innovation-top .innovation-status {
+    width: 620px;
+  }
+  #innovation-bar .innovation-top .innovation-hidden {
+    width: 144px;
+  }
+  #innovation-bar .innovation-status {
+    padding-right: 0;
+  }
+  #innovation-footer .footer-menu ul.default li a{
+    margin-right: 25px;
+  }
 }
 @media (min-width: 992px){
   #innovation-footer .footer-menu ul, #innovation-bar .innovation-top {
     width: 931px;
   }
+  #innovation-bar .innovation-top .innovation-status {
+    width: 787px;
+  }
+  #innovation-bar .innovation-top .innovation-hidden {
+    width: 144px;
+  }
+  #innovation-bar .innovation-status {
+    padding-right: 20px;
+  }
 }
 @media (min-width: 1200px){
   #innovation-footer .footer-menu ul, #innovation-bar .innovation-top {
     width: 1170px;
+  }
+  #innovation-bar .innovation-top .innovation-status {
+    width: 1026px;
+  }
+  #innovation-bar .innovation-top .innovation-hidden {
+    width: 144px;
+  }
+  #innovation-bar .innovation-status {
+    padding-right: 20px;
   }
 }
 
