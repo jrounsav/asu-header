@@ -451,7 +451,7 @@
 #asu_footer ul li{display:inline;margin-right:20px}
 #asu_footer a{text-decoration:none;font-size:1.1em;font-weight:400;color:#333}
 #asu_footer a:hover{color:#666}
-@media only screen and (max-width :930px) {
+@media only screen and (max-width :992px) {
 	#asu_footer a{font-size:1em}
 	#asu_footer .footer_img_wrap {
     	display: none;
