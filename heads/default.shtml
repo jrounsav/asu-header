@@ -13,5 +13,5 @@ ASUHeader.browser = false;
 <!--[if IE 6]><script>ASUHeader.browser = true;</script><![endif]-->
 <!--[if IE 7]><script>ASUHeader.browser = true;</script><![endif]-->
 <!--[if IE 8]><script>ASUHeader.browser = true;</script><![endif]-->
-<script type="text/javascript" src="//www.asu.edu/asuthemes/4.4/js/asu_header.min.js"></script>
+<script type="text/javascript" src="//www.asu.edu/asuthemes/4.4/js/asu_header.min.js?v=0.1"></script>
 <!-- END /asuthemes/4.4/heads/default.shtml -->

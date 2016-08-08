@@ -206,7 +206,13 @@
 		if (ASUHeader.user_displayname) {
 			var sso_name = document.createElement('li');
 			//sso_name.innerHTML = ASUHeader.user_displayname; --- Security fix suggested by Jason Harper on 5/3/2013
-			sso_name.appendChild(document.createTextNode(ASUHeader.user_displayname));
+			var ASUHeaderStr;
+			if(ASUHeader.user_displayname){
+				ASUHeaderStr = ASUHeader.user_displayname;
+				ASUHeaderStr.toString();
+				ASUHeaderStr = ASUHeaderStr.replace(/[^\w\s]/gi, '');
+			}
+			sso_name.appendChild(document.createTextNode(ASUHeaderStr));
 			ul.appendChild(sso_name);
 		}
 		var sso_link = document.createElement('li');
