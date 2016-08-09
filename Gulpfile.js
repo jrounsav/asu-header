@@ -2,14 +2,11 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var git = require('gulp-git');
 var gitrev = require('git-rev');
-var run = require('gulp-run');
+var shel = require('gulp-shell');
 
 gulp.task('default', function(){
     gitrev.branch(function (str) {
         gutil.log('not branch', str)
     });
-    return run('echo $TRAVIS_BRANCH').exec()
-        .pipe(function(branch) {
-            gutil.log('this is branch ' + branch);
-        });
+    shell.task('echo $TRAVIS_BRANCH');
 });
