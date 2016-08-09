@@ -7,5 +7,7 @@ before_script:
   - npm install gulp
   - npm install node-sass
   - npm install --save-dev kss
+  - npm install gulp-git --save
+  - npm install git-rev --save
 
 script: gulp
