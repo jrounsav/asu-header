@@ -8,4 +8,4 @@ before_script:
 #  - npm install node-sass
 #  - npm install --save-dev kss
 
-script: build.sh
+script: ./build.sh
