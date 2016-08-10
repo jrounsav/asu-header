@@ -1,7 +1,8 @@
+#!/bin/bash
 if [[ $TRAVIS_BRANCH == 'dev' ]]
-  gulp dev
+    gulp dev
 elif [[ $TRAVIS_BRANCH == 'qa' ]]
-  gulp qa
+    gulp qa
 elif [[ $TRAVIS_BRANCH == 'master' ]]
-  gulp master
+    gulp master
 fi
